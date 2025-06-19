@@ -30,6 +30,7 @@ This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic capt
   2. Go to [Wireshark Sample Captures](https://wiki.wireshark.org/SampleCaptures#sample-captures)
   3. Download the [bfd-raw-auth-simple.pcap](bfd-raw-auth-simple.pcap) file
   4. Once downloaded, drag the file to your desktop
+  5. Right click the file and then let click 'Open With "wireshark"'
 
 ---
 
