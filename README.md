@@ -19,11 +19,13 @@ This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic capt
 
 ---
 
-## Tools Used
-- Kali Linux (2024.1)
-- Wireshark
-- [Wireshark Sample Captures](https://wiki.wireshark.org/SampleCaptures#sample-captures)
+## Setup
+- Tools
+  - Kali Linux (2024.1)
+  - Wireshark
+  - [Wireshark Sample Captures](https://wiki.wireshark.org/SampleCaptures#sample-captures)
 - File: [bfd-raw-auth-simple.pcap](bfd-raw-auth-simple.pcap)
+- 
 
 ---
 
