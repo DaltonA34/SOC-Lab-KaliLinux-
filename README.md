@@ -25,7 +25,11 @@ This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic capt
   - Wireshark
   - [Wireshark Sample Captures](https://wiki.wireshark.org/SampleCaptures#sample-captures)
 - File: [bfd-raw-auth-simple.pcap](bfd-raw-auth-simple.pcap)
-- 
+- Steps:
+  1. Startup and log into you Kali Linux Virtual Machine
+  2. Go to [Wireshark Sample Captures](https://wiki.wireshark.org/SampleCaptures#sample-captures)
+  3. Download the [bfd-raw-auth-simple.pcap](bfd-raw-auth-simple.pcap) file
+  4. Once downloaded, drag the file to your desktop
 
 ---
 
