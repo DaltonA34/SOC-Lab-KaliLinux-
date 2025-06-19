@@ -29,7 +29,7 @@ This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic capt
   3. Download the [bfd-raw-auth-simple.pcap](bfd-raw-auth-simple.pcap) file
   4. Once downloaded, drag the file to your desktop
   5. Right click the file and then let click 'Open With "wireshark"'
-[Image showing how to open with wireshark](SS1-Lab1.png)
+- [Image showing how to open with wireshark](SS1-Lab1.png)
 
 ---
 
@@ -42,6 +42,7 @@ This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic capt
 - The Password is 'secret'
 - Authentication length: 9 bytes
 - Authentication Key ID: 2
+- [Image showing the Authentication section](SS4-Lab1.png)
 
 ---
 
