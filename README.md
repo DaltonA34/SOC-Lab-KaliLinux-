@@ -1,10 +1,21 @@
-# Network Traffic Analysis with Wireshark & tcpdump
+# Analyzing BFD Authentication in Network Traffic Using Wireshark
 
 ## Overview
-This project demonstrates how to use Wireshark and tcpdump on Kali Linux to capture and analyze different types of network traffic. It focuses on identifying network traffic and locating information such as passwords, and other forms of
-authentication used on this network
+This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic captured in a .pcap file to observe raw authentication exchanges, identify potential security issues, and learn how authentication mechanisms are exposed or protected in network protocols.
 
-The goal is to showcase practical network analysis skills relevant to cybersecurity roles such as SOC Analyst and Security Analyst.
+---
+
+## Introduction
+- What is BFD?
+  -BFD (Bidirectional Forwarding Detection) is a network protocol used to detect faults between two forwarding engines (like routers or switches) across any type of media (physical or virtual) very quickly—often within milliseconds.
+
+- Why is authentication important in routing protocols?
+  -Authentication in routing protocols is crucial for securing the integrity and reliability of a network. Without authentication, attackers can manipulate routing information, leading to man-in-the-middle attacks, denial of service, traffic interception, or blackholing.
+  
+- Overview of raw authentication (vs MD5 or SHA auth).
+  -Raw authentication sends a plain text password in routing protocol messages, making it simple but highly insecure, as the password can be easily captured with packet sniffing tools like Wireshark. In contrast, MD5 authentication uses a cryptographic hash to obscure the password, offering better protection but still being vulnerable to certain cryptographic attacks. HMAC-SHA (e.g., SHA-256) provides the strongest security by generating a keyed hash that ensures both the integrity and authenticity of routing messages, making it the recommended choice for modern, secure networks.
+
+
 
 ---
 
