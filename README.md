@@ -61,6 +61,11 @@ This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic capt
 ## Conclusion
 - This lab demonstrates how insecure authentication mechanisms, such as raw or simple password authentication, can be easily exposed and analyzed using tools like Wireshark. By examining BFD traffic, we observed firsthand how sensitive information—like authentication credentials—can be captured in plaintext, underscoring the importance of implementing robust security measures in network protocols. For production environments, relying on weak authentication is unacceptable. Instead, cryptographically secure methods like HMAC-SHA should be adopted to protect routing infrastructure from unauthorized access, tampering, and network-based attacks. Through exercises like this, cybersecurity professionals can better understand the risks in legacy protocols and advocate for stronger security practices in real-world networks.
 
+---
+
+## Disclaimer
+- This lab was conducted using publicly available packet capture files on a controlled, non-operational (dead/fake) network environment. No real-world or live production networks were accessed or affected during the analysis. The purpose of this lab is strictly educational and intended to promote a better understanding of network security practices. All analysis was performed in a safe, isolated environment to ensure no impact on actual network infrastructure or data privacy.
+
 
 
 
