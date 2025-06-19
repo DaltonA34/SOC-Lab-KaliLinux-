@@ -15,8 +15,6 @@ This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic capt
 - Overview of raw authentication (vs MD5 or SHA auth).
   - Raw authentication sends a plain text password in routing protocol messages, making it simple but highly insecure, as the password can be easily captured with packet sniffing tools like Wireshark. In contrast, MD5 authentication uses a cryptographic hash to obscure the password, offering better protection but still being vulnerable to certain cryptographic attacks. HMAC-SHA (e.g., SHA-256) provides the strongest security by generating a keyed hash that ensures both the integrity and authenticity of routing messages, making it the recommended choice for modern, secure networks.
 
-
-
 ---
 
 ## Setup
@@ -33,5 +31,44 @@ This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic capt
   5. Right click the file and then let click 'Open With "wireshark"'
 
 ---
+
+## Analysis
+- Filter the log data using udp.port == 3784
+- Scroll down to the section named 'BFD Control message' and open the tab
+- Scroll down further to see the 'Authentication' tab and open it
+- The 'Authentication Type' here is 'Simple Password (1)'
+- Further scrolling reveals the simple password to be the only authentication used
+- The Password is 'secret'
+- Authentication length: 9 bytes
+- Authentication Key ID: 2
+
+---
+
+## Security Implications
+- Is this authentication method secure?
+  - Using a simple password for authentication is not secure, especially in network protocols or systems exposed to the internet or untrusted networks. Simple passwords are vulnerable to brute force attacks, dictionary attacks, and eavesdropping if transmitted in plaintext or weakly protected forms.
+
+- What are the risks of using raw authentication?
+  - Using raw authentication, which sends passwords in plaintext, is risky because anyone capturing network traffic can easily see and steal the password. This allows attackers to impersonate trusted devices, intercept or modify messages, and inject false routing information, leading to network disruptions and security breaches. Since raw authentication provides no message integrity or encryption, it is highly insecure and should only be used in trusted or lab environments, never in production networks.
+
+- What best practices (e.g., MD5/SHA auth, encryption) should be used instead?
+  - Best practices for securing authentication in routing protocols include using cryptographic methods like MD5 or, preferably, HMAC-SHA (e.g., SHA-256) to ensure the password is never sent in plaintext. These methods generate a secure hash that verifies the authenticity and integrity of messages, protecting against tampering and replay attacks. Additionally, enabling encryption for routing traffic, using strong, complex passwords, and regularly rotating keys further strengthen security.
+
+---
+
+## Conclusion
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
