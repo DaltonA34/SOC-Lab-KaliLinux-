@@ -36,7 +36,7 @@ The goal is to showcase practical network analysis skills relevant to cybersecur
 
 ### 2️⃣ DNS Exfiltration Attempt
 
-- **Capture File:** `dns_exfiltration.pcap`
+- **Capture File:** `rpl-dio-mc-nsa-optional-tlv-dissector-sample.pcap`
 - **Scenario:** A client encodes sensitive data into DNS queries.
 - **Findings:** Suspiciously long or randomized domain names that indicate potential exfiltration.
 
