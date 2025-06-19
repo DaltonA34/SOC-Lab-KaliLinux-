@@ -1,7 +1,8 @@
 # 🔍 Network Traffic Analysis with Wireshark & tcpdump
 
 ## 📘 Overview
-This project demonstrates how to use Wireshark and tcpdump on Kali Linux to capture and analyze different types of network traffic. It focuses on identifying insecure protocols and suspicious behaviors such as plaintext credentials and data exfiltration through DNS.
+This project demonstrates how to use Wireshark and tcpdump on Kali Linux to capture and analyze different types of network traffic. It focuses on identifying network traffic and locating information such as passwords, and other forms of
+authentication used on this network
 
 The goal is to showcase practical network analysis skills relevant to cybersecurity roles such as SOC Analyst and Security Analyst.
 
@@ -10,7 +11,7 @@ The goal is to showcase practical network analysis skills relevant to cybersecur
 ## 🛠️ Tools Used
 - Kali Linux (2024.1)
 - Wireshark
-- FTP server (vsftpd or Metasploitable)
+- [Wireshark Sample Captures](https://wiki.wireshark.org/SampleCaptures#sample-captures)
 - Dig / Iodine for DNS testing
 
 ---
