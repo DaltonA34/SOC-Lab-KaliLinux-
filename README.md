@@ -66,6 +66,12 @@ This lab analyzes BFD (Bidirectional Forwarding Detection) protocol traffic capt
 ## Disclaimer
 - This lab was conducted using publicly available packet capture files on a controlled, non-operational (dead/fake) network environment. No real-world or live production networks were accessed or affected during the analysis. The purpose of this lab is strictly educational and intended to promote a better understanding of network security practices. All analysis was performed in a safe, isolated environment to ensure no impact on actual network infrastructure or data privacy.
 
+---
+
+## Author
+- Dalton Armstrong
+- Cybersecurity Major | Christopher Newport University
+
 
 
 
